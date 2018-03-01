@@ -1,0 +1,12 @@
+<h1>Home Page</h1>
+
+<% if logged_in? %>
+  <%=@current_user.inspect %>
+  <% @current_user.name %><br><br><br><br><br><br>
+  <a href="show">Profile</a>
+<% else %>
+  <h1>What do you want to do?</h1>
+  <h2><a href="/users/new">Register</a></h2>
+  <h2><a href="/sessions/new">Log in</a></h2>
+<% end %>
+
